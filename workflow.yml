@@ -1,4 +1,4 @@
-name: Restart EpikHost Server
+name: Restart MDevHosting Server
 
 on: [ push ]
 
@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Restart server
         run: |
-          curl "https://panel.epikhost.xyz/api/client/servers/${{env.id}}/power" \
+          curl "https://panel.monitors.cf/api/client/servers/${{env.id}}/power" \
             -H 'Accept: application/json' \
             -H 'Content-Type: application/json' \
             -H 'Authorization: Bearer ${{env.apiKey}}' \
